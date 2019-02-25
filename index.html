@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<head>
+	<title>Exercícios</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<!--Arquivo css da página.-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--Barra de menu superior.-->
+	<nav class="nav navbar-inverse">
+		<ul class="nav navbar-nav">
+			<li>
+				<a class="navbar-brand" href="index.html">
+					<label>Home</label>
+				</a>				
+			</li>			
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<div class="dropdown show">
+				<a class="btn btn-muted dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="glyphicon glyphicon-th-list"></span>
+					<span class="sr-only"></span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#calcularValores">Calculadora</a><br>
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#mediaEscolar">Média Escolar</a><br>
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#calculoTriangulo">Calcular Hipotenusa</a><br>
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#areaCirculo">Área do Círculo</a><br>
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#calculoIMC">Calcular IMC</a>
+				</div>			
+			</div>
+		</ul>
+	</nav>
+
+	<!--Corpo da página.-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<!--Slides.-->
+				<div class="carousel slide" id="meuSlider" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#meuSlider" data-ride-to="0" class="active"></li>
+						<li data-target="#meuSlider" data-ride-to="1"></li>
+						<li data-target="#meuSlider" data-ride-to="2"></li>
+						<li data-target="#meuSlider" data-ride-to="3"></li>
+						<li data-target="#meuSlider" data-ride-to="4"></li>
+					</ol>
+						
+					<div class="carousel-inner">
+						<div class="item active">
+							<img id="img-slide" src="img/Calculadora.jpg" class="img-responsive">
+							<div class="carousel-caption">
+								<h3 class="txt">Cálculo de valores</h3>
+								<p class="txt">Clique aqui para realizar um cálculo.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img id="img-slide" src="img/boletim.jpg" class="img-responsive">
+							<div class="carousel-caption">
+								<h3 class="txt">Média Escolar</h3>
+								<p class="txt">Verifique sua média escolar</p>
+							</div>
+						</div>
+						<div class="item">
+							<img id="img-slide" src="img/triangulo.jpg" class="img-responsive">
+							<div class="carousel-caption">
+								<h3 class="txt">Cálculo de Hipotenusa</h3>
+								<p class="txt">Descubra a hiponetusa de um triângulo.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img id="img-slide" src="img/circulo.jpg" class="img-responsive">
+							<div class="carousel-caption">
+								<h3 class="txt">Área do círculo</h3>
+								<p class="txt">Calcule a área de um círculo.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img id="img-slide" src="img/balanca.jpg" class="img-responsive">
+							<div class="carousel-caption">
+								<h3 class="txt">Cálculo de IMC</h3>
+								<p class="txt">Descubra seu índice de massa corporal.</p>
+							</div>
+						</div>
+					</div>
+
+					<a class="left carousel-control" href="#meuSlider" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only"></span>					
+					</a> 
+					<a class="right carousel-control" href="#meuSlider" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only"></span>
+					</a>
+				</div>
+				<!--fim do slide.-->
+
+			</div>
+		</div>
+		<br>
+
+		<!--Menu principal-->
+		<main>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="jumbotron">
+						<h3>Calculo de válores</h3><br>
+						<p>Realize contas com as quatro operações aqui.</p>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#calcularValores">Calcular</button>
+					</div>			
+				</div>
+				<div class="col-md-6">
+					<div class="jumbotron">
+						<h3>Média Escolar</h3><br>
+						<p>Verifique sua média e reze para não ficar retido.</p>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#mediaEscolar">Calcular</button>
+					</div>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="jumbotron">
+						<h3>Calculo de Hipotenusa</h3><br>
+						<p>Se você não faz a minima do que é isso, essa ferramenta vai te salvar.</p>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#calculoTriangulo">Calcular</button>
+					</div>			
+				</div>
+				<div class="col-md-6">
+					<div class="jumbotron">
+						<h3>Área do Círculo</h3><br>
+						<p>
+							Com certeza você viu muito isso na escola, mas depois de duas semanas e meia esqueceu.
+						</p>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#areaCirculo">Lembrar</button>
+					</div>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="jumbotron" id="box">
+						<h3>Cálculo de IMC</h3><br>
+						<p>Só ha quatro motivos para você clicar nesta ferramenta:</p>
+						<p>1. O professor pediu para pesquisar ou disse que iria cair na prova;</p>
+						<p>2. Você esta acima do peso;</p>
+						<p>3. Você esta abaixo do peso;</p>
+						<p>4. Você não tem outra coisa pra fazer.</p>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#calculoIMC">Calcular</button>
+					</div>		
+				</div>		
+			</div>
+		</main>
+		<!--Fim do menu principal.-->
+		
+		<!--Janelas modal-->
+		<!--Janela da Calculadora.-->
+		<div id="calcularValores" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<span class="glyphicon glyphicon-remove" id="modalClose" data-dismiss="modal"></span>
+						<h4 class="modal-title">Calculadora</h4>
+					</div>
+									
+					<div class="modal-body">
+						<form action="calculadora.php" method="POST" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Valor 1</label><br>
+									<input type="number" class="form-control" name="valor1" placeholder="primeiro valor" required><br>
+									<label>Valor 2</label><br>	
+									<input type="number" class="form-control" name="valor2" placeholder="segundo valor" required><br>
+									
+									<hr>
+									<input type="submit" class="btn btn-success" value="Calcular">
+								</div>
+							</div>
+						</form>		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--Fim da janela de Calculadora.-->
+		
+		<!--Janela de Média Escolar.-->
+		<div id="mediaEscolar" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<span class="glyphicon glyphicon-remove" id="modalClose" data-dismiss="modal"></span>
+						<h4 class="modal-title">Média Escolar</h4>
+					</div>
+									
+					<div class="modal-body">
+						<form action="media_escolar.php" method="POST" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Primeira nota:</label><br>
+									<input type="number" class="form-control" name="nota1" placeholder="nota do primeiro bimestre" required><br>
+									<label>Segunda nota:</label><br>	
+									<input type="number" class="form-control" name="nota2" placeholder="nota do segundo bimestre" required><br>
+									<label>Terceira nota:</label><br>
+									<input type="number" class="form-control" name="nota3" placeholder="nota do terceiro bimestre" required><br>
+									<label>Quarta nota:</label><br>
+									<input type="number" class="form-control" name="nota4" placeholder="nota do quarto bimestre" required><br>
+									<label>Quinta nota:</label><br>
+									<input type="number" class="form-control" name="nota5" placeholder="nota do quinto bimestre" required>
+									<hr>
+									<input type="submit" class="btn btn-success" value="Calcular">
+								</div>
+							</div>
+						</form>		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--Fim da Janela de Média Escolar.-->
+	
+		<!--Janela de Cálculo da hipotenusa.-->
+		<div id="calculoTriangulo" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<span class="glyphicon glyphicon-remove" id="modalClose" data-dismiss="modal"></span>
+						<h4 class="modal-title">Cálculo da Hipotenusa</h4>
+					</div>
+									
+					<div class="modal-body">
+						<form action="calcular_hipotenusa.php" method="POST" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Lado 1:</label><br>
+									<input type="number" class="form-control" name="lado1" placeholder="digite um dos lados do triângulo." required><br>
+									<label>Lado 2:</label><br>	
+									<input type="number" class="form-control" name="lado2" placeholder="digite o segundo lado do triângulo" required><br>
+
+									<hr>
+									<input type="submit" class="btn btn-success" value="Calcular">
+								</div>
+							</div>
+						</form>		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--Fim da janela de cálculo da hipotenusa.-->
+
+		<!--Janela de cálculo da área do círculo.-->
+		<div id="areaCirculo" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<span class="glyphicon glyphicon-remove" id="modalClose" data-dismiss="modal"></span>
+						<h4 class="modal-title">Área do Círculo</h4>
+					</div>
+									
+					<div class="modal-body">
+						<form action="area_do_circulo.php" method="POST" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Raio do círculo:</label><br>
+									<input type="number" class="form-control" name="raio" placeholder="digite o raio do círculo" required><br>
+									
+									<hr>
+									<input type="submit" class="btn btn-success" value="Calcular">
+								</div>
+							</div>
+						</form>		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--Fim da janela de cálculo do círculo-->
+
+		<!--Janela de cálculo de IMC.-->
+		<div id="calculoIMC" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<span class="glyphicon glyphicon-remove" id="modalClose" data-dismiss="modal"></span>
+						<h4 class="modal-title">Calcular IMC</h4>
+					</div>
+									
+					<div class="modal-body">
+						<form action="calculo_imc.php" method="POST" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Peso(kg):</label><br>
+									<input type="text" class="form-control" name="peso" placeholder="digite seu peso em quilogramas" required><br>
+									<label>Altura(m):</label><br>	
+									<input type="text" class="form-control" name="altura" placeholder="digite sua altura em metros" required><br>
+									
+									<hr>
+									<input type="submit" class="btn btn-success" value="Calcular">
+								</div>
+							</div>
+						</form>		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--Fim da janela de cálculo de IMC.-->
+		<!--Fim das janelas modal.-->
+		
+	</div>
+</body>
+</html>
