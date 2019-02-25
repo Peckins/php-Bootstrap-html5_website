@@ -1,0 +1,60 @@
+.navbar-inverse{
+	height: 50px;
+}
+.navbar ul li a{
+}
+.navbar-inverse ul li a{
+	margin: 0 auto;
+}
+#img-slide{
+	height: 100%:
+	width: 100%;
+	max-height: 500px;
+	max-width: 100%;
+	min-height: 500px;
+	min-width: 100%;
+	margin: 0 auto;
+}
+.txt{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.jumbotron button{
+	margin-top: 10px;
+}
+#box{
+	text-align: center;
+}
+.navbar-right{
+	margin-right: 5px;
+	margin-top: 10px;
+}
+.glyphicon-th-list{
+	color: darkgrey;
+}
+.dropdown-menu {
+	text-align: right;
+}
+.dropdown-menu a{
+	margin-right: 10px;
+}
+#modalClose{
+	float: right;
+}
+#logo{
+	width: 50px;
+	height: 50px;
+}
+.footdown{
+	background-color: darkgrey;
+}
+.footlist {
+	display: inline;
+}
+#marca{
+	margin-top: 10px;
+	width: 150px;
+	height: 150px:
+}
+.foottitle{
+	margin-left: 10px;
+}
